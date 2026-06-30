@@ -87,7 +87,7 @@
         <string notr="true">background-color: rgb(143, 240, 164);</string>
        </property>
        <property name="text">
-        <string>SYNC RTM32 RTC</string>
+        <string>SYNC STM32 RTC</string>
        </property>
       </widget>
      </item>
