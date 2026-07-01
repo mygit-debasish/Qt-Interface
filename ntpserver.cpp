@@ -5,7 +5,7 @@
 
 NTPClient::NTPClient(QObject *parent) : QObject(parent)
 {
-    qDebug()<<"[NTPClient Constructor]";
+    //qDebug()<<"[NTPClient Constructor]";
     packet.resize(48);
     packet.fill(0x00);
 
@@ -15,7 +15,7 @@ NTPClient::NTPClient(QObject *parent) : QObject(parent)
     connect(m_udpSocket,
             &QUdpSocket::readyRead,
             this,
-             &NTPClient::ReadPendingDatagrams);
+            &NTPClient::ReadPendingDatagrams);
 }
 
 NTPClient::~NTPClient()
@@ -42,13 +42,13 @@ void NTPClient::ReadPendingDatagrams()
 
         /* Reading NTP time epoch */
         m_udpSocket->readDatagram(udpData.data(),
-                                udpData.size());
+                                  udpData.size());
 
         quint32 ntpEpoch =
                 ((quint8)udpData[40] << 24) |
                 ((quint8)udpData[41] << 16) |
                 ((quint8)udpData[42] << 8)  |
-                 (quint8)udpData[43];
+                (quint8)udpData[43];
         quint32 unixEpoch = ntpEpoch - 2208988800;
 
         qDebug()<<"NTP time epoch"<<ntpEpoch;
@@ -75,9 +75,8 @@ void NTPClient::ReadPendingDatagrams()
         {
             checkSum ^= static_cast <uint8_t>(Bytes);
         }
-        //txFrame.append(checkSum);
-        txFrame.append(0xEE);
 
+        txFrame.append(checkSum);
         qDebug()<<"Transmit TX frame: "<<txFrame.toHex(' ');
 
         /* Signal */

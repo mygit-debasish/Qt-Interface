@@ -14,17 +14,15 @@ ParentWindow::ParentWindow(QWidget *parent)
 
     m_ntpClient = new NTPClient(this);
     uart = new UartReceive(this);
-    QString name = "नमस्ते";
-
-    qDebug()<<"NTP to UNIX seconds: "<<countNtpUnixSeconds();
-    qDebug()<<"Namaste :"<<name;
+    QString name = "नमस्कार, आपका हार्दिक स्वागत है।";
+    qDebug()<<name;
 
     /* Connect signals and slots */
     connect(ui->pExit,
             &QPushButton::clicked,
             this,
             &ParentWindow::close);
-#if 1
+
     connect(ui->pClearLog,
             &QPushButton::clicked,
             this,
@@ -46,13 +44,11 @@ ParentWindow::ParentWindow(QWidget *parent)
             ui->pConStatus,
             &QTextEdit::append);
 
-#if 1
     /* Logging current time in Main Log Window */
     connect(uart,
             &UartReceive::logMessage,
             ui->pLogWindow,
             &QTextEdit::append);
-#endif
 
     /* LCD Display */
     connect(uart,
@@ -66,15 +62,11 @@ ParentWindow::ParentWindow(QWidget *parent)
             uart,
             &UartReceive::onSendTimeFrame);
 
-#endif
-
-#if 1
     /* NTP Client connect and display TxTimeFrame */
     connect(ui->pSendNtpEpoch,
             &QPushButton::clicked,
             m_ntpClient,
             &NTPClient::onConnectNTPServer);
-#endif
 }
 
 ParentWindow::~ParentWindow()
@@ -125,11 +117,3 @@ uint32_t ParentWindow::countNtpUnixSeconds()
 
     return seconds;
 }
-
-#if 0
-void ParentWindow::onSendTimeFrame()
-{
-    qDebug()<<"[SLOT]: Sending time-frame to STM32F769I-DISCO";
-    emit sendTimeFrametoSTM("[SIGNAL]: Sending time-frame to STM32F769I-DISCO");
-}
-#endif
