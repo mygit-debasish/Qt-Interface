@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file>UART-Icons/ClearLog.svg</file>
+        <file>UART-Icons/Desktop.svg</file>
+        <file>UART-Icons/Disconnect.svg</file>
+        <file>UART-Icons/Download.svg</file>
+        <file>UART-Icons/Eject.svg</file>
+        <file>UART-Icons/Ethernet.svg</file>
+        <file>UART-Icons/Exit.svg</file>
+        <file>UART-Icons/FileRead.svg</file>
+        <file>UART-Icons/FileWrite.svg</file>
+        <file>UART-Icons/MicroChip.svg</file>
+        <file>UART-Icons/PowerOff.svg</file>
+        <file>UART-Icons/SDCard.svg</file>
+        <file>UART-Icons/SNTP.svg</file>
+        <file>UART-Icons/Trash.svg</file>
+        <file>UART-Icons/UART-Connect.svg</file>
+        <file>UART-Icons/Upload.svg</file>
+    </qresource>
+</RCC>
