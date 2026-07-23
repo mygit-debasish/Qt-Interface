@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/ProjIcons">
+        <file>ICONS/UART-Connect.svg</file>
+        <file>ICONS/ClearLog.svg</file>
+        <file>ICONS/Desktop.svg</file>
+        <file>ICONS/Disconnect.svg</file>
+        <file>ICONS/Download.svg</file>
+        <file>ICONS/MicroChip.svg</file>
+        <file>ICONS/SNTP.svg</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>ICONS/ClearLog.svg</file>
+        <file>ICONS/Desktop.svg</file>
+        <file>ICONS/Disconnect.svg</file>
+        <file>ICONS/Download.svg</file>
+        <file>ICONS/Eject.svg</file>
+        <file>ICONS/Ethernet.svg</file>
+        <file>ICONS/Exit.svg</file>
+        <file>ICONS/FileRead.svg</file>
+        <file>ICONS/FileWrite.svg</file>
+        <file>ICONS/MicroChip.svg</file>
+        <file>ICONS/PowerOff.svg</file>
+        <file>ICONS/SDCard.svg</file>
+        <file>ICONS/SNTP.svg</file>
+        <file>ICONS/Trash.svg</file>
+        <file>ICONS/UART-Connect.svg</file>
+        <file>ICONS/Upload.svg</file>
+    </qresource>
+</RCC>
