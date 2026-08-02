@@ -4,3 +4,5 @@ The user interface (UI) provides the following features:
 2. Commands to perform a software reset of the STM32 board.
 3. Commands to verify the Developer's ECDSA signature of the device firmware.
 4. Commands to connect to and disconnect from the STM32 board over USART.
+
+Reference STM32 Project: STM32F769i-DISCO/Project-SDMMC_Test
